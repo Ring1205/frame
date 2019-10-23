@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/img_login_background"
+    android:fitsSystemWindows="false"
+    android:clipToPadding="true"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="165dp"
+        android:src="@mipmap/ic_hzy_name"/>
+
+    <Button
+        android:id="@+id/btn_wechat_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="微 信 授 权"
+        android:textSize="20dp"
+        android:paddingLeft="42dp"
+        android:paddingRight="42dp"
+        android:layout_marginBottom="250dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_login_background"/>
+    <Button
+        android:id="@+id/btn_account_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="账 号 登 录"
+        android:textSize="20dp"
+        android:paddingLeft="42dp"
+        android:paddingRight="42dp"
+        android:layout_marginBottom="250dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_login_background"/>
+</RelativeLayout>

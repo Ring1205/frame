@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionMenuTextColor">@color/colorPrimary</item>
+        <item name="styleLoadingLayout">@style/LoadingLayoutStyle</item>
+    </style>
+
+    <style name="LoadingLayoutStyle" parent="LoadingLayout.Style">
+        <item name="llEmptyImage">@drawable/ic_empty</item> <!-- 数据为空 -->
+        <item name="llErrorImage">@drawable/ic_error</item> <!-- 加载失败 -->
+        <!--<item name="llLoadingResId">@layout/common_loading</item>--> <!-- 加载中动画 -->
+    </style>
+</resources>

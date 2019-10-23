@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name" translatable="false">火知眼个人版</string>
+    <string name="press_again_exit" translatable="false">再按一次退出</string>
+</resources>
