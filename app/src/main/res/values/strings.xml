@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name" translatable="false">火知眼个人版</string>
-    <string name="press_again_exit" translatable="false">再按一次退出</string>
+    <string name="app_name">hzy_c</string>
+    <string name="press_again_exit">Press again to exit</string>
+    <string name="tab_my_devices">Devices</string>
+    <string name="tab_alarm_history">Alarm</string>
+    <string name="tab_personal_information">Information</string>
 </resources>

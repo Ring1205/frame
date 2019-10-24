@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">火知眼个人版</string>
+    <string name="press_again_exit">再按一次退出</string>
+    <string name="tab_my_devices">我的设备</string>
+    <string name="tab_alarm_history">告警历史</string>
+    <string name="tab_personal_information">个人信息</string>
+</resources>

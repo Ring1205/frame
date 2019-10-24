@@ -2,8 +2,9 @@ package com.jzxfyun.manager;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.SupportActivity;
 
+import com.jzxfyun.common.base.fragment.SupportActivity;
+import com.jzxfyun.common.utils.SystemUtil;
 import com.jzxfyun.manager.fragment.MainFragment;
 
 public class MainActivity extends SupportActivity {
