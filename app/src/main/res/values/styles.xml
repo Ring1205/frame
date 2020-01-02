@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -11,10 +11,146 @@
         <item name="actionMenuTextColor">@color/colorPrimary</item>
         <item name="styleLoadingLayout">@style/LoadingLayoutStyle</item>
     </style>
-
+    <!-- CardView -->
     <style name="LoadingLayoutStyle" parent="LoadingLayout.Style">
         <item name="llEmptyImage">@drawable/ic_empty</item> <!-- 数据为空 -->
         <item name="llErrorImage">@drawable/ic_error</item> <!-- 加载失败 -->
         <!--<item name="llLoadingResId">@layout/common_loading</item>--> <!-- 加载中动画 -->
     </style>
+    <style name="CardView.BackgroundColor" parent="CardView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardBackgroundColor">@android:color/white</item> <!-- 设置背景色 -->
+    </style>
+    <style name="CardView.BackgroundColor.MyDevices" parent="CardView.BackgroundColor">
+        <item name="cardCornerRadius">6dp</item> <!-- 设置圆角大小 -->
+        <item name="cardElevation">5dp</item> <!-- 设置z轴阴影 -->
+        <item name="cardMaxElevation">5dp</item> <!-- 设置z轴最大高度值 -->
+        <item name="cardUseCompatPadding">true</item> <!-- 是否使用CompatPadding参数 -->
+        <item name="contentPadding">10dp</item> <!-- 内部边距，子View与CardView的距离 -->
+        <item name="cardPreventCornerOverlap">true</item> <!-- 是否使用PreventCornerOverlap，在V20和之前的版本中添加内边距，这个属性为了防止内容和边角的重叠 -->
+    </style>
+    <style name="CardView.BackgroundColor.DeviceItem" parent="CardView.BackgroundColor">
+        <item name="cardCornerRadius">5dp</item> <!-- 设置圆角大小 -->
+        <item name="cardElevation">3dp</item> <!-- 设置z轴阴影 -->
+        <item name="cardMaxElevation">3dp</item> <!-- 设置z轴最大高度值 -->
+        <item name="cardUseCompatPadding">true</item> <!-- 是否使用CompatPadding参数 -->
+        <!--<item name="contentPadding">6dp</item> &lt;!&ndash; 内部边距，子View与CardView的距离 &ndash;&gt;-->
+        <item name="cardPreventCornerOverlap">true</item> <!-- 是否使用PreventCornerOverlap，在V20和之前的版本中添加内边距，这个属性为了防止内容和边角的重叠 -->
+    </style>
+    <style name="CardView.BackgroundColor.AlarmItem" parent="CardView.BackgroundColor">
+        <item name="cardCornerRadius">5dp</item> <!-- 设置圆角大小 -->
+        <item name="cardElevation">2dp</item> <!-- 设置z轴阴影 -->
+        <item name="cardMaxElevation">2dp</item> <!-- 设置z轴最大高度值 -->
+        <item name="cardUseCompatPadding">true</item> <!-- 是否使用CompatPadding参数 -->
+        <!--<item name="contentPadding">10dp</item> &lt;!&ndash; 内部边距，子View与CardView的距离 &ndash;&gt;-->
+        <item name="cardPreventCornerOverlap">true</item> <!-- 是否使用PreventCornerOverlap，在V20和之前的版本中添加内边距，这个属性为了防止内容和边角的重叠 -->
+    </style>
+    <!-- RecyclerView -->
+    <style name="RecyclerView">
+        <item name="android:clipToPadding">false</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="RecyclerView.Padding" parent="RecyclerView">
+        <item name="android:padding">5dp</item>
+    </style>
+    <!--Line-->
+    <style name="Line"/>
+    <style name="Line.horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/colorLineCd</item>
+    </style>
+    <style name="Line.Vertical">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/colorLineCd</item>
+    </style>
+
+    <!--                        河蟹                        -->
+    <style name="start_up_style_item_et">
+        <item name="android:background">@drawable/common_bg_underline</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/colorItem</item>
+        <item name="android:textColorHint">@color/colorHint</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="start_up_style_item_btn_main">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/common_check_box</item>
+        <item name="android:clickable">false</item>
+    </style>
+    <!--获取图形验证码按钮-->
+    <style name="start_up_style_item_btn_verification">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">33dp</item>
+        <item name="android:background">@drawable/common_bg_corner_main_16</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="start_up_style_item_btn_deputy">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:paddingLeft">30dp</item>
+        <item name="android:paddingRight">30dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/colorHint</item>
+    </style>
+    <style name="button_page">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/text_margin</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:backgroundTint" tools:ignore="NewApi">@color/colorPrimary</item>
+        <item name="android:layout_marginRight">@dimen/text_margin</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="text_input_edit">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/text_margin</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="text_input_style_item_et" parent="start_up_style_item_et">
+        <item name="android:background">@drawable/common_bg_underline</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">#666</item>
+        <item name="android:textColorHint">#ccc</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="common_text_input_layout_style" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+    <style name="btn_alert_bottom">
+        <item name="android:textSize">14dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/common_color_text</item>
+    </style>
+
 </resources>

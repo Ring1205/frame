@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/CardView.BackgroundColor.AlarmItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_adapterName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="3dp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_userDeviceTypeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="@string/alarm_device_alias" />
+
+            <TextView
+                android:id="@+id/tv_deviceInstallAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="@string/alarm_install_address" />
+
+            <TextView
+                android:id="@+id/tv_deviceStateGroupName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="@string/alarm_industry_type" />
+
+            <TextView
+                android:id="@+id/tv_receiveTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/occurrence_time" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp" />
+
+        <ImageView
+            android:id="@+id/iv_device"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignRight="@+id/ll_view"
+            android:layout_alignBottom="@+id/ll_view"
+            android:layout_marginRight="18dp"
+            android:layout_marginBottom="12dp"
+            android:src="@mipmap/img_device_big" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_alignRight="@+id/ll_view"
+            android:layout_alignBottom="@+id/ll_view"
+            android:layout_marginRight="18dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/background_gradients" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

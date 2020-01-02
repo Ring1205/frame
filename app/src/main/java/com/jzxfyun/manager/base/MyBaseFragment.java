@@ -7,18 +7,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.jzxfyun.manager.utils.NetWorkUtil;
+import com.bumptech.glide.manager.SupportRequestManagerFragment;
 import com.jzxfyun.common.base.fragment.swipeback.SwipeBackFragment;
 import com.jzxfyun.common.utils.CommonUtils;
 import com.jzxfyun.common.utils.TimeUpUtils;
+import com.jzxfyun.manager.fragment.MainFragment;
+import com.jzxfyun.manager.utils.NetWorkUtil;
 
 public abstract class MyBaseFragment extends SwipeBackFragment {
     View layoutView;
     NetWorkUtil netWorkUtil;
 
     public NetWorkUtil netWork() {
-        if (netWorkUtil == null)
+        if (netWorkUtil == null){
             netWorkUtil = new NetWorkUtil(getContext(), layoutView);
+        }
         return netWorkUtil;
     }
 
@@ -41,6 +44,33 @@ public abstract class MyBaseFragment extends SwipeBackFragment {
      */
     public void finish() {
         _mActivity.onBackPressed();
+    }
+
+    /**
+     * 退回到原有的fragment
+     * @param fragment
+     */
+    public void returnFragment(Class<?> fragment){
+        for (int i = getFragmentManager().getFragments().size()-1; i >= 0; i--) {
+            if (getFragmentManager().getFragments().get(i).getClass() == fragment){
+                return;
+            }else {
+                finish();
+            }
+        }
+    }
+
+    /**
+     * 退到首页
+     * @param frg
+     * @param fragment
+     */
+    public void returnMainFragment(int frg, Class<?> fragment){
+        if (fragment == MainFragment.class){
+            MainFragment.HIDDEN = frg;
+            fragment = SupportRequestManagerFragment.class;
+        }
+        returnFragment(fragment);
     }
 
     /**

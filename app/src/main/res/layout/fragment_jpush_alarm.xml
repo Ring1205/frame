@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_device_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/s_device_type"
+            android:textColor="@color/colorText"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_device_alias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/s_device_alias"
+            android:textColor="@color/colorText"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_installation_site"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/s_installation_site"
+            android:textColor="@color/colorText"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_device_model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/s_device_model"
+            android:textColor="@color/colorText"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_device_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/s_device_state"
+            android:textColor="@color/colorText"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_occurred_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/s_occurred_time"
+            android:textColor="@color/colorText"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/contact"
+        android:textColor="@android:color/white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_restoration"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="25dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorBlue"
+                android:text="@string/restoration"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btn_erasure"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="25dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorRed"
+                android:text="@string/erasure"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

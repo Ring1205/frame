@@ -74,7 +74,7 @@ public class CoordinateUtil {
 
     /**
      * (BD-09)-->84
-     *
+     * 百度坐标系转换成真实坐标系
      * @param bd_lat
      * @param bd_lon
      * @return

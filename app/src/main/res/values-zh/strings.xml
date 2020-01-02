@@ -4,4 +4,216 @@
     <string name="tab_my_devices">我的设备</string>
     <string name="tab_alarm_history">告警历史</string>
     <string name="tab_personal_information">个人信息</string>
+    <string name="sign_in">登录</string>
+    <string name="hint_account">请填写账号</string>
+    <string name="hint_password">请填写密码</string>
+    <string name="digits_password"><![CDATA[1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_!@#$%^&<>*`~()-+=.,;:]]></string>
+    <string name="remember_password">记住密码</string>
+    <string name="forgot_password">忘记密码</string>
+    <string name="btn_sign_in">登 录</string>
+    <string name="btn_sign_up">注 册</string>
+    <string name="sign_up">注册</string>
+    <string name="no_historical_account">无历史账号</string>
+    <string name="hint_enter_captcha">填写图形验证码</string>
+    <string name="hint_verification_code">请填写验证码</string>
+    <string name="btn_get_code">获取验证码</string>
+    <string name="hint_phone_number">请输入手机号</string>
+    <string name="privacy_policy">隐私条款</string>
+    <string name="get_code">获取验证码</string>
+    <string name="perfect_the_message">完善消息</string>
+    <string name="hint_reconfirm_new_password">请重新填写密码</string>
+    <string name="complete_information">完善信息</string>
+    <string name="hint_real_name">请填写真实姓名</string>
+    <string name="set_password">设置密码</string>
+    <string name="toast_name_or_password">请输入用户名或密码</string>
+    <string name="toast_password_not_match">两次输入密码不一致</string>
+    <string name="hint_password_cannot_contain_account">新密码不能包含账号</string>
+    <string name="search">搜索</string>
+    <string name="hint_search">请输入搜索关键字</string>
+    <string name="location">定位</string>
+    <string name="hint_select_area">请选择所在区域</string>
+    <string name="area">所在区域：</string>
+    <string name="address">详细地址：</string>
+    <string name="hint_address">请输入详细地址</string>
+    <string name="btn_save_address">保存地址</string>
+    <string name="quit">退出</string>
+    <string name="toast_logout_failed">退出登录失败</string>
+    <string name="all_devices">全部设备</string>
+    <string name="hint_no_devices">当前您还没有添加任何设备</string>
+    <string name="btn_add_devices">添加设备</string>
+    <string name="toast_no_options">暂无选项</string>
+    <string name="toast_no_linkman">暂无联系人</string>
+    <string name="title_device_scan">设备扫码</string>
+    <string name="manual_input">手动输入</string>
+    <string name="scan_qr_code">扫描二维码</string>
+    <string name="equipment_coding">设备编码：</string>
+    <string name="hint_device_code">请输入设备编码</string>
+    <string name="device_type">设备类型</string>
+    <string name="hint">提示</string>
+    <string name="hint_is_reconfigure_wifi">是否重新配置WiFi？</string>
+    <string name="flash_light">闪光灯</string>
+    <string name="photo_album">相册</string>
+    <string name="capture">扫码识别</string>
+    <string name="hint_device_type">设备类型：</string>
+    <string name="hint_equipment_code">设备标识码：</string>
+    <string name="hint_device_alias">设备别名：</string>
+    <string name="hint_enter_device_alias">请输入设备别名(最多6个汉字)</string>
+    <string name="hint_installation_location">安装位置：</string>
+    <string name="hint_equipment_model">设备型号：</string>
+    <string name="hint_equipment_status">设备状态：</string>
+    <string name="hint_manufacturer">生产厂商：</string>
+    <string name="hint_service_start">服务开始时间：</string>
+    <string name="hint_service_dead">服务截止时间：</string>
+    <string name="custom">自定义</string>
+    <string name="please_select">--请选择--</string>
+    <string name="combustible_gas">可燃气体</string>
+    <string name="smoke_detector">烟感</string>
+    <string name="installation_location">安装位置</string>
+    <string name="custom_location">请输入自定义位置(最多6个汉字)</string>
+    <string name="custom_install_address">自定义安装位置</string>
+    <string name="input_error">输入有误</string>
+    <string name="maximum_characters">最多6个汉字</string>
+    <string name="on_line">在线</string>
+    <string name="off_line">离线</string>
+    <string name="delete">删除</string>
+    <string name="finish">完成</string>
+    <string name="selected">已选择%s项</string>
+    <string name="title_delete_device">删除设备</string>
+    <string name="msg_selected_delete_device">您是否确定删除已选择设备？</string>
+    <string name="toast_delete_device">请选择要删除的设备</string>
+    <string name="edit">编辑</string>
+    <string name="confirm">确认</string>
+
+    <!--wifi设置流程-->
+    <string name="wifi_setting_ios">苹果手机设置步骤：</string>
+    <string name="wifi_setting_ios_step">1.打开设置；\n2.打开无线局域网；\n3.选择对应Wi-Fi名称；\n4.若未连接过该Wi-Fi或Wi-Fi密码以修改，需重新填写密码</string>
+    <string name="wifi_setting_android">安卓手机设置步骤：</string>
+    <string name="wifi_setting_android_step">1.打开设置；\n2.打开WLAN；\n3.选择对应Wi-Fi名称；\n4.若未连接过该Wi-Fi或Wi-Fi密码以修改，需重新填写密码</string>
+    <string name="wifi_setting_fast_entry">快捷进入？</string>
+
+
+    <!--WiFi设置-->
+    <string name="title_wifi_setting">Wi-Fi设置</string>
+    <string name="wifi_environment_configuration">Wi-Fi环境配置</string>
+    <string name="wifi_setting_environment_desc">1. 仅支持2.4GHz的Wi-FI环境\n2. Wi-Fi名称必须是英文或数字\n3. Wi-Fi密码中不能包含空格</string>
+    <string name="title_wifi_setting_process">Wi-Fi配置流程</string>
+    <string name="wifi_name">Wi-Fi名称</string>
+    <string name="wifi_password">Wi-Fi密码</string>
+    <string name="wifi_password_hint">请输入Wi-Fi密码</string>
+    <string name="wifi_switch">切换Wi-Fi</string>
+    <string name="wifi_configuration_completed">配置完成</string>
+    <string name="wifi_reconfigure">重新配置</string>
+    <string name="wifi_abandon_configuration">放弃配置</string>
+
+    <string name="wifi_toast_enter_registration_mode_first">请先将设备进入注册模式</string>
+
+    <!--wifi设置弹窗-->
+    <string name="dialog_wifi_setting_title">未连接Wi-Fi</string>
+    <string name="dialog_wifi_setting_content">请连接设备即将配置的Wi-Fi环境</string>
+    <string name="dialog_wifi_setting_help">帮助</string>
+
+    <!--wifi连接页面-->
+    <string name="wifi_device_setting_title">配置设备</string>
+
+    <string name="wifi_connecting">设备配置中</string>
+    <string name="wifi_connecting_success">设备配置成功</string>
+    <string name="wifi_connecting_fail">设备配置失败</string>
+
+    <string name="wifi_connect_search_device">搜索设备</string>
+    <string name="wifi_connect_phone2device">连接设备</string>
+    <string name="wifi_connect_device2route">设备配网</string>
+    <string name="wifi_connect_config_completed">配置完成</string>
+
+    <string name="wifi_window_title">是否重新配置Wi-Fi</string>
+    <string name="title_enter_registration_mode">进入注册模式</string>
+    <string name="enter_registration_mode">请将设备配置为注册模式，若有疑问请查阅设备说明书</string>
+    <string name="alarm_device_alias">设备别名：%s</string>
+    <string name="alarm_install_address">安装位置：%s</string>
+    <string name="alarm_industry_type">警情类型：%s</string>
+    <string name="occurrence_time">发生时间：%s</string>
+    <string name="emergency_contact">紧急联系人</string>
+    <string name="intelligent_detector_devices">%d个智能探测器设备</string>
+    <string name="push_setting">推送设置（电话和短信）</string>
+    <string name="basic_info">基本信息</string>
+    <string name="not_added">未添加</string>
+    <string name="btn_add_contacts">添加联系人</string>
+    <string name="title_add_contact">添加联系人</string>
+    <string name="contact">联系人</string>
+    <string name="hint_contact_person">请输入联系人</string>
+    <string name="contact_number">联系电话</string>
+    <string name="hint_contact_number">请输入联系电话</string>
+    <string name="title_emergency_contact">紧急联系人：%s</string>
+    <string name="title_contact_number">联系电话：%s</string>
+    <string name="hint_name">姓名：</string>
+    <string name="hint_phone">联系电话：</string>
+    <string name="hint_area">所在区域：</string>
+    <string name="hint_addr">详细地址：</string>
+    <string name="btn_keep_change">保存更改</string>
+    <string name="personal_details">个人信息详情</string>
+    <string name="toast_enter_name">请输入姓名</string>
+    <string name="hint_select_district">请选择行政区</string>
+    <string name="hint_administrative_region">所在行政区：</string>
+    <string name="safety_fire_knowledge">消防知识</string>
+    <string name="title_select_area">选择所在区域</string>
+    <string name="title_account_binding">账号绑定</string>
+    <string name="title_phone">手机：%s</string>
+    <string name="title_account">账号：%s</string>
+    <string name="has_been_associated">已关联</string>
+    <string name="btn_unbound">解除绑定</string>
+    <string name="hint_unbind_account">您是否确定解绑此账号</string>
+    <string name="btn_close_account">注销账号</string>
+    <string name="msg_cancal_account">您是否确定注销账号？</string>
+    <string name="i_see">我知道了</string>
+    <string name="string_alert_review">复核</string>
+
+    <string name="string_alert_floor_plan">火警点位</string>
+    <string name="string_alert_video">视频联动</string>
+    <string name="string_alert_device_detail">设备详情</string>
+    <string name="erasure">消音</string>
+    <string name="restoration">复位</string>
+    <string name="msg_log_out">是否确定退出登录？</string>
+    <string name="contact_format_error">联系人格式错误</string>
+    <string name="msg_is_delete_linman">是否要删除此联系人？</string>
+    <string name="toast_detailed_address">请填写详细地址</string>
+    <string name="title_alert_push">警情推送</string>
+    <string name="s_device_type">设备类型：%s</string>
+    <string name="s_device_alias">设备别名：%s</string>
+    <string name="s_installation_site">安装位置：%s</string>
+    <string name="s_device_model">设备型号：%s</string>
+    <string name="s_device_state">设备状态：%s</string>
+    <string name="s_occurred_time">发生时间：%s</string>
+    <string name="select_installation_site">请选择安装位置</string>
+    <string name="fill_device_alias">请填写设备别名</string>
+    <string name="title_district_selection">行政区选择</string>
+
+    <string name="msg_account_too_large">账户下设备数量过多（%s个），建议联系经销商，将账号升级为企业用户</string>
+
+    <!--隐私条款-->
+    <string name="privacy_policy_title">用户协议和隐私政策</string>
+    <string name="privacy_policy_info">隐私条款于2019年5月20日更新，于2019年6月20日生效。我们对隐私条款进行了详细修订，从该日期开始，这一隐私条款能够提供有关我们如何管理您在使用APP时透露的个人信息的隐私详情</string>
+    <string name="privacy_policy_vice_info">本APP将严格保护您的个人信息，确保信息安全。您在点击同意下列协议前，务必审慎阅读，并充分理解协议条款内容。</string>
+    <string name="privacy_policy_quit">退出</string>
+    <string name="privacy_policy_agree">同意并继续</string>
+    <string name="privacy_policy_link">《用户协议和隐私政策》</string>
+
+    <!--更新服务-->
+    <string name="update_service_begin_update">开始更新</string>
+    <string name="update_service_download_speed_of_progress">下载进度</string>
+    <string name="update_service_download_update_failed_and_download_again">更新失败，请重新下载</string>
+    <string name="update_service_download_update_failed">更新失败</string>
+    <string name="update_service_download_update_completed">下载完成</string>
+
+    <!--APP升级-->
+    <string name="dialog_update_now">APP发现新的版本</string>
+    <string name="dialog_update_discovers_new_version">是否升级？</string>
+    <string name="toast_is_latest_version">当前已是最新版本</string>
+    <string name="user_agreement_and_privacy_policy">用户协议和隐私政策</string>
+
+    <!--关于APP-->
+    <string name="about_us">关于我们</string>
+    <string name="check_new_version">检测更新</string>
+    <string name="current_version">当前版本：</string>
+    <string name="us_info">\u3000\u3000火知眼个人版APP是一款针对高危场所消防设施进行监控的应用软件，能够协助个人用户进
+        行警情复核，并能够对智能网关、感烟探测器、用电安全、灭火器等设备进行实时监控和智能化管理。通过应用业主还能
+        够设置警情发生时的紧急联系人，以便于能够在警情发生第一时间收到电话、短信等通知，避免更大的损失发生。</string>
 </resources>

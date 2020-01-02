@@ -7,20 +7,23 @@
     <color name="divider_line_color">#F0F0F0</color>
     <color name="toolbar_menu">#AAAAFF</color>
     <color name="common_title_color">#FFFFFF</color>
-    <color name="tab_unselect">#c9c9c9</color>
-    <color name="color_line_cd">#cdcdcd</color>
-    <color name="bg_btn">#dadada</color>
+    <color name="colorGrayButtonBackground">#dadada</color>
+    <color name="colorGrayC9">#c9c9c9</color>
+    <color name="colorLineCd">#cdcdcd</color>
 
-    <color name="common_color_hint">#CCC</color>
-    <color name="common_main_color">#ef7133</color>
-    <color name="black">#393943</color>
+    <color name="colorMain">#ef7133</color>
+    <color name="colorHint">#CCC</color>
+    <color name="colorBlack">#393943</color>
     <!--主文本色值-->
-    <color name="common_color_text">#3C3C43</color>
-    <color name="common_color_text_level_2">#4F4F57</color>
-    <color name="common_color_text_level_3">#999</color>
-    <color name="common_color_bg">#F0F0F0</color>
-    <color name="common_color_666">#666666</color>
-    <color name="color_blue">#35b5f7</color>
+    <color name="colorText">#3C3C43</color>
+    <color name="colorTextGray4f">#4F4F57</color>
+    <color name="colorTextGray9">#999</color>
+    <color name="colorBackground">#F0F0F0</color>
+    <color name="color666">#666666</color>
+    <color name="colorBlue">#35b5f7</color>
+    <color name="colorLightBlue">#0079FF</color>
+    <color name="colorOrange">#FF6224</color>
+    <color name="colorRed">#FF4646</color>
 
     <color name="divider_line_color_light">#F0F0F0</color>
 

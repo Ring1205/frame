@@ -2,7 +2,6 @@ package com.jzxfyun.common.widget;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.graphics.Paint;
 import android.support.annotation.StringRes;
 import android.support.v4.content.ContextCompat;
 import android.view.Display;
@@ -14,6 +13,7 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.jzxfyun.common.R;
@@ -27,14 +27,13 @@ public class AlertDialog {
     private LinearLayout lLayout_bg;
     private TextView txt_title;
     private TextView txt_msg;
-    private TextView txt_hint;
+    private RelativeLayout rl_view;
     private Button btn_neg;
     private Button btn_pos;
-    private View img_line;
+    private View line_vertical, line_transverse;
     private Display display;
     private boolean showTitle = false;
     private boolean showMsg = false;
-    private boolean showHint = false;
     private boolean showPosBtn = false;
     private boolean showNegBtn = false;
 
@@ -51,10 +50,11 @@ public class AlertDialog {
         lLayout_bg = view.findViewById(R.id.lLayout_bg);
         txt_title = view.findViewById(R.id.txt_title);
         txt_msg = view.findViewById(R.id.txt_msg);
-        txt_hint = view.findViewById(R.id.txt_hint);
+        rl_view = view.findViewById(R.id.rl_add_view);
         btn_neg = view.findViewById(R.id.btn_neg);
         btn_pos = view.findViewById(R.id.btn_pos);
-        img_line = view.findViewById(R.id.img_line);
+        line_vertical = view.findViewById(R.id.line_vertical);
+        line_transverse = view.findViewById(R.id.line_transverse);
         setGone();
         dialog = new Dialog(context, R.style.AlertDialogStyle);
         dialog.setContentView(view);
@@ -73,15 +73,12 @@ public class AlertDialog {
         if (lLayout_bg != null) {
             txt_title.setVisibility(View.GONE);
             txt_msg.setVisibility(View.GONE);
-            txt_hint.setVisibility(View.GONE);
             btn_neg.setVisibility(View.GONE);
             btn_pos.setVisibility(View.GONE);
-            img_line.setVisibility(View.GONE);
-
+            line_vertical.setVisibility(View.GONE);
         }
         showTitle = false;
         showMsg = false;
-        showHint = false;
         showPosBtn = false;
         showNegBtn = false;
         return this;
@@ -98,6 +95,7 @@ public class AlertDialog {
         txt_title.setText(title);
         return this;
     }
+
     public AlertDialog setTitle(String title) {
         showTitle = true;
         txt_title.setText(title);
@@ -115,6 +113,7 @@ public class AlertDialog {
         txt_msg.setText(msg);
         return this;
     }
+
     public AlertDialog setMsg(String msg) {
         showMsg = true;
         txt_msg.setText(msg);
@@ -122,16 +121,18 @@ public class AlertDialog {
     }
 
     /**
-     * 设置Hint
+     * 添加View
      *
-     * @param hint
+     * @param view
      * @return
      */
-    public AlertDialog setHint(@StringRes int hint, View.OnClickListener onListener) {
-        showHint = true;
-        txt_hint.setText(hint);
-        txt_hint.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);
-        txt_hint.setOnClickListener(onListener);
+    public AlertDialog setView(View view) {
+        rl_view.addView(view);
+        return this;
+    }
+    public AlertDialog setView(View view,@CommonDialog.Visibility int visibility) {
+        rl_view.addView(view);
+        line_transverse.setVisibility(visibility);
         return this;
     }
 
@@ -154,21 +155,30 @@ public class AlertDialog {
      * @return
      */
     public AlertDialog setPositiveButton(@StringRes int text, final OnClickListener listener) {
-        return setPositiveButton(text, -1, listener);
+        return setPositiveButton(text, -1, true, listener);
     }
 
-    public AlertDialog setPositiveButton(@StringRes int text, int color,final OnClickListener listener) {
+    public AlertDialog setPositiveButton(@StringRes int text, int color, final OnClickListener listener) {
+        return setPositiveButton(text, color, true, listener);
+    }
+
+    public AlertDialog setPositiveButton(@StringRes int text, boolean isd, final OnClickListener listener) {
+        return setPositiveButton(text, -1, isd, listener);
+    }
+
+    public AlertDialog setPositiveButton(@StringRes int text, int color, final boolean isd, final OnClickListener listener) {
         showPosBtn = true;
         btn_pos.setText(text);
         if (color == -1)
-            color = R.color.black;
+            color = R.color.colorBlack;
         btn_pos.setTextColor(ContextCompat.getColor(context, color));
         btn_pos.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (listener != null)
                     listener.onClick(v);
-                dismiss();
+                if (isd)
+                    dismiss();
             }
         });
         return this;
@@ -186,11 +196,11 @@ public class AlertDialog {
         return setNegativeButton(text, -1, listener);
     }
 
-    public AlertDialog setNegativeButton(@StringRes int text, int color,final OnClickListener listener) {
+    public AlertDialog setNegativeButton(@StringRes int text, int color, final OnClickListener listener) {
         showNegBtn = true;
         btn_neg.setText(text);
         if (color == -1) {
-            color = R.color.black;
+            color = R.color.colorBlack;
         }
         btn_neg.setTextColor(ContextCompat.getColor(context, color));
 
@@ -222,10 +232,6 @@ public class AlertDialog {
             txt_msg.setVisibility(View.VISIBLE);
         }
 
-        if (showHint) {
-            txt_hint.setVisibility(View.VISIBLE);
-        }
-
         if (!showPosBtn && !showNegBtn) {
             btn_pos.setText("");
             btn_pos.setVisibility(View.VISIBLE);
@@ -243,7 +249,7 @@ public class AlertDialog {
             btn_pos.setBackgroundResource(R.drawable.alert_dialog_right_selector);
             btn_neg.setVisibility(View.VISIBLE);
             btn_neg.setBackgroundResource(R.drawable.alert_dialog_left_selector);
-            img_line.setVisibility(View.VISIBLE);
+            line_vertical.setVisibility(View.VISIBLE);
         }
 
         if (showPosBtn && !showNegBtn) {

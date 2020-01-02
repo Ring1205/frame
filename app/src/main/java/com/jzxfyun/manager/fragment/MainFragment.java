@@ -2,11 +2,13 @@ package com.jzxfyun.manager.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.jzxfyun.manager.R;
+import com.jzxfyun.manager.base.BaseMainFragment;
 import com.jzxfyun.manager.event.TabSelectedEvent;
 import com.jzxfyun.manager.event.cope.EventBusActivityScope;
 import com.jzxfyun.common.base.fragment.SupportFragment;
@@ -20,6 +22,7 @@ public class MainFragment extends SupportFragment {
     public static final int FIRST = 0;
     public static final int SECOND = 1;
     public static final int THIRD = 2;
+    public static int HIDDEN = -1;
 
     private SupportFragment[] mFragments = new SupportFragment[4];
 
@@ -89,6 +92,14 @@ public class MainFragment extends SupportFragment {
                 EventBusActivityScope.getDefault(_mActivity).post(new TabSelectedEvent(position));
             }
         });
+    }
+
+    @Override
+    public void onHiddenChanged(boolean hidden) {
+        super.onHiddenChanged(hidden);
+        if (!hidden && HIDDEN != -1){
+            ((BaseMainFragment)mFragments[HIDDEN]).netWorkLoading();
+        }
     }
 
 }

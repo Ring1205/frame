@@ -6,7 +6,7 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:paddingStart">@dimen/common_padding</item>
         <item name="android:paddingEnd">@dimen/common_padding</item>
-        <item name="android:textColor">@color/common_color_hint</item>
+        <item name="android:textColor">@color/colorHint</item>
         <item name="android:textSize">14dp</item>
     </style>
 </resources>

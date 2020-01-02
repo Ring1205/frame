@@ -4,4 +4,216 @@
     <string name="tab_my_devices">Devices</string>
     <string name="tab_alarm_history">Alarm</string>
     <string name="tab_personal_information">Information</string>
+    <string name="sign_in">Sign In</string>
+    <string name="hint_account">Payment account ID</string>
+    <string name="hint_password">Please fill in the password</string>
+    <string name="digits_password"><![CDATA[1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_!@#$%^&<>*`~()-+=.,;:]]></string>
+    <string name="remember_password">Remember</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="btn_sign_in">Sign In</string>
+    <string name="btn_sign_up">Sign Up</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="no_historical_account">No historical account</string>
+    <string name="hint_enter_captcha">Graph validate code</string>
+    <string name="hint_verification_code">Verification code</string>
+    <string name="btn_get_code">CODE</string>
+    <string name="hint_phone_number">Please enter your cell phone number</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="get_code">Get code</string>
+    <string name="perfect_the_message">Perfect the message</string>
+    <string name="hint_reconfirm_new_password">Reconfirm New Password</string>
+    <string name="complete_information">Complete information</string>
+    <string name="hint_real_name">Please fill in your real name</string>
+    <string name="set_password">Set a password</string>
+    <string name="toast_name_or_password">Please enter user name or password</string>
+    <string name="toast_password_not_match">Entered passwords differ</string>
+    <string name="hint_password_cannot_contain_account">New password cannot contain account number</string>
+    <string name="search">Search</string>
+    <string name="hint_search">Please enter your search keywords</string>
+    <string name="location">Location</string>
+    <string name="hint_select_area">Please select the area</string>
+    <string name="area">Area :</string>
+    <string name="address">Address :</string>
+    <string name="hint_address">Please enter the detailed address</string>
+    <string name="btn_save_address">SAVE ADDRESS</string>
+    <string name="quit">Quit</string>
+    <string name="toast_logout_failed">Logout failed</string>
+    <string name="all_devices">Armamentarium</string>
+    <string name="hint_no_devices">You are not currently adding any devices</string>
+    <string name="btn_add_devices">Add devices</string>
+    <string name="toast_no_options">No options</string>
+    <string name="toast_no_linkman">No linkman</string>
+    <string name="title_device_scan">EQUIPMENT CODE</string>
+    <string name="manual_input">Manual Input</string>
+    <string name="scan_qr_code">scan QR code</string>
+    <string name="equipment_coding">equipment coding :</string>
+    <string name="hint_device_code">Please enter the device code</string>
+    <string name="device_type">Device type</string>
+    <string name="hint">Hint</string>
+    <string name="hint_is_reconfigure_wifi">Do you want to reconfigure WiFi?</string>
+    <string name="flash_light">LIGHT</string>
+    <string name="photo_album">PHOTO</string>
+    <string name="capture">Capture</string>
+    <string name="hint_device_type">Device type :</string>
+    <string name="hint_equipment_code">Equipment code :</string>
+    <string name="hint_device_alias">Device alias :</string>
+    <string name="hint_enter_device_alias">Please enter device alias (up to 6 Chinese characters)</string>
+    <string name="hint_installation_location">Installation location :</string>
+    <string name="hint_equipment_model">Equipment model :</string>
+    <string name="hint_equipment_status">Equipment status :</string>
+    <string name="hint_manufacturer">Manufacturer :</string>
+    <string name="hint_service_start">Service start :</string>
+    <string name="hint_service_dead">Service dead :</string>
+    <string name="custom">Custom</string>
+    <string name="please_select">--Please select--</string>
+    <string name="combustible_gas">LEL</string>
+    <string name="smoke_detector">Smoke detector</string>
+    <string name="installation_location">Installation location</string>
+    <string name="custom_location">Please enter custom position (up to 6 Chinese characters)</string>
+    <string name="custom_install_address">Custom installation location</string>
+    <string name="input_error">Input error</string>
+    <string name="maximum_characters">Maximum 6 characters</string>
+    <string name="on_line">On line</string>
+    <string name="off_line">Off line</string>
+    <string name="delete">Delete</string>
+    <string name="finish">Finish</string>
+    <string name="selected">%s selected</string>
+    <string name="title_delete_device">Delete Device</string>
+    <string name="msg_selected_delete_device">Are you sure to delete the selected device?</string>
+    <string name="toast_delete_device">Please select the device you want to delete</string>
+    <string name="edit">Edit</string>
+
+    <!--wifi设置流程-->
+    <string name="wifi_setting_ios">IOS Setup Steps :</string>
+    <string name="wifi_setting_ios_step">1.Open Settings ;\n2.Open WLAN ;\n3.Select the corresponding Wi-Fi name ;\n4.If you have not connected the Wi-Fi or Wi-Fi password to modify, you need to fill in the password again.</string>
+    <string name="wifi_setting_android">Android Setup Steps :</string>
+    <string name="wifi_setting_android_step">1.Open Settings ;\n2.Open WLAN ;\n3.Select the corresponding Wi-Fi name ;\n4.If you have not connected the Wi-Fi or Wi-Fi password to modify, you need to fill in the password again.</string>
+    <string name="wifi_setting_fast_entry">Fast settings?</string>
+
+    <!--wifi设置-->
+    <string name="title_wifi_setting">Wi-Fi Setting</string>
+    <string name="wifi_environment_configuration">Wi-Fi environment configuration</string>
+    <string name="wifi_setting_environment_desc">1.The device can only be used in 2.4GHz Wi-Fi environment\n2.Wi-Fi name only supports English and numbers\n3.Wi-Fi password cannot have spaces</string>
+    <string name="title_wifi_setting_process">Wi-Fi Setting Process"</string>
+    <string name="wifi_name">Wi-Fi name</string>
+    <string name="wifi_password">Wi-Fi password</string>
+    <string name="wifi_password_hint">Enter password</string>
+    <string name="wifi_switch">Switch Wi-Fi</string>
+    <string name="wifi_configuration_completed">Configuration Completed</string>
+    <string name="wifi_reconfigure">reconfigure</string>
+    <string name="wifi_abandon_configuration">Abandon Configuration</string>
+
+    <string name="wifi_toast_enter_registration_mode_first">Please enter the registration mode first</string>
+
+    <!--wifi设置弹窗-->
+    <string name="dialog_wifi_setting_title">Unconnected Wi-Fi</string>
+    <string name="dialog_wifi_setting_content">Connect to the Wi-Fi environment that the device will be configured</string>
+    <string name="dialog_wifi_setting_help">Help</string>
+
+    <!--设备配置-->
+    <string name="wifi_device_setting_title">Device setting</string>
+    <string name="wifi_connecting">Device configuration</string>
+    <string name="wifi_connecting_success">Device configuration successful</string>
+    <string name="wifi_connecting_fail">Device configuration failed</string>
+
+    <string name="wifi_connect_search_device">Search device</string>
+    <string name="wifi_connect_phone2device">Connecting device</string>
+    <string name="wifi_connect_device2route">Device distribution network</string>
+    <string name="wifi_connect_config_completed">Configuration completed</string>
+
+    <string name="wifi_window_title">Whether to reconfigure wifi</string>
+
+    <!--Wi-Fi-->
+    <string name="title_enter_registration_mode">Enter Registration Mode</string>
+    <string name="enter_registration_mode">Please configure the device to register mode. If you have any questions, please refer to the device manual.</string>
+    <string name="alarm_device_alias">Device alias: %s</string>
+    <string name="alarm_install_address">Install address: %s</string>
+    <string name="alarm_industry_type">Industry type: %s</string>
+    <string name="occurrence_time">Occurrence time: %s</string>
+    <string name="emergency_contact">Emergency contact</string>
+    <string name="intelligent_detector_devices">%d smart detector device</string>
+    <string name="push_setting">Push Settings (phone and SMS)</string>
+    <string name="basic_info">Basic Info</string>
+    <string name="not_added">Not added</string>
+    <string name="btn_add_contacts">Add Contact</string>
+    <string name="title_add_contact">Add Contact</string>
+    <string name="contact">Contact</string>
+    <string name="hint_contact_person">Please enter contact person</string>
+    <string name="contact_number">Contact number</string>
+    <string name="hint_contact_number">Please enter your contact number</string>
+    <string name="title_emergency_contact">Contacts:%s</string>
+    <string name="title_contact_number">Phone:%s</string>
+    <string name="hint_name">Name :</string>
+    <string name="hint_phone">Phone :</string>
+    <string name="hint_area">Area :</string>
+    <string name="hint_addr">Address :</string>
+    <string name="btn_keep_change">Save the changes</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="toast_enter_name">Please input your name</string>
+    <string name="hint_select_district">Please select district</string>
+    <string name="hint_administrative_region">Administrative region :</string>
+    <string name="safety_fire_knowledge">Safety Fire Knowledge</string>
+    <string name="title_select_area">Select the region</string>
+    <string name="title_account_binding">Account binding</string>
+    <string name="title_phone">Phone :%s</string>
+    <string name="title_account">Account :%s</string>
+    <string name="has_been_associated">Has been associated</string>
+    <string name="btn_unbound">Unbound</string>
+    <string name="hint_unbind_account">Are you sure to unbind this account</string>
+    <string name="btn_close_account">Close account</string>
+    <string name="msg_cancal_account">Are you sure to cancel your account?</string>
+    <string name="i_see">I see</string>
+    <string name="string_alert_review">Re-check</string>
+
+    <string name="string_alert_floor_plan">The fire alarm point</string>
+    <string name="string_alert_video">Video linkage</string>
+    <string name="string_alert_device_detail">Device Info</string>
+    <string name="erasure">erasure</string>
+    <string name="restoration">restoration</string>
+    <string name="msg_log_out">Are you sure to log out?</string>
+    <string name="confirm">Confirm</string>
+    <string name="contact_format_error">Contact format error</string>
+    <string name="msg_is_delete_linman">Do you want to delete this contact?</string>
+    <string name="toast_detailed_address">Please fill in the detailed address</string>
+    <string name="title_alert_push">Alert push</string>
+    <string name="s_device_type">Device type :%s</string>
+    <string name="s_device_alias">Device alias :%s</string>
+    <string name="s_installation_site">Installation site :%s</string>
+    <string name="s_device_model">Device model :%s</string>
+    <string name="s_device_state">Device state :%s</string>
+    <string name="s_occurred_time">Occurred time :%s</string>
+    <string name="select_installation_site">Please select the installation location</string>
+    <string name="fill_device_alias">Please fill in the device alias</string>
+    <string name="title_district_selection">District selection</string>
+
+    <string name="msg_account_too_large">The number of devices under the account is too large (%s). It is suggested to contact the dealer to upgrade the account to enterprise user</string>
+
+    <string name="privacy_policy_title">No Fire Privacy Policy</string>
+    <string name="privacy_policy_info">隐私条款于2019年5月20日更新，于2019年6月20日生效。我们对隐私条款进行了详细修订，从该日期开始，这一隐私条款能够提供有关我们如何管理您在使用APP时透露的个人信息的隐私详情</string>
+    <string name="privacy_policy_vice_info">本APP将严格保护您的个人信息，确保信息安全。您在点击同意下列协议前，务必审慎阅读，并充分理解协议条款内容。</string>
+    <string name="privacy_policy_quit">QUIT</string>
+    <string name="privacy_policy_agree">AGREE</string>
+    <string name="privacy_policy_link">《User Agreement and Privacy Policy》</string>
+
+    <!--更新服务-->
+    <string name="update_service_begin_update">Start Update</string>
+    <string name="update_service_download_speed_of_progress">Download progress</string>
+    <string name="update_service_download_update_failed_and_download_again">Update failed, please download again</string>
+    <string name="update_service_download_update_failed">Update failed</string>
+    <string name="update_service_download_update_completed">Download completed</string>
+
+    <!--APP升级-->
+    <string name="dialog_update_now">APP discovers new version</string>
+    <string name="dialog_update_discovers_new_version">Whether to upgrade ?</string>
+    <string name="toast_is_latest_version">Currently the latest version</string>
+    <string name="user_agreement_and_privacy_policy">User agreement and privacy policy</string>
+
+    <!--关于APP-->
+    <string name="about_us">About Us</string>
+    <string name="check_new_version">Updates</string>
+    <string name="current_version">Version :</string>
+    <string name="us_info">\u3000\u3000火知眼个人版APP是一款针对高危场所消防设施进行监控的应用软件，能够协助个人用户进
+        行警情复核，并能够对智能网关、感烟探测器、用电安全、灭火器等设备进行实时监控和智能化管理。通过应用业主还能
+        够设置警情发生时的紧急联系人，以便于能够在警情发生第一时间收到电话、短信等通知，避免更大的损失发生。</string>
+
 </resources>

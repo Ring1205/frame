@@ -78,6 +78,18 @@ public class PermissionUtils {
     private static final String PERMISSION_READ_EXTERNAL_STORAGE = Manifest.permission.READ_EXTERNAL_STORAGE;
     // 写入外部储存卡
     private static final String PERMISSION_WRITE_EXTERNAL_STORAGE = Manifest.permission.WRITE_EXTERNAL_STORAGE;
+    // 获取wifi权限
+    private static final String PERMISSION_ACCESS_WIFI_STATE = Manifest.permission.ACCESS_WIFI_STATE;
+    // 变更wifi权限
+    private static final String PERMISSION_CHANGE_WIFI_STATE = Manifest.permission.CHANGE_WIFI_STATE;
+    // 获取网络状态
+    private static final String PERMISSION_ACCESS_NETWORK_STATE = Manifest.permission.ACCESS_NETWORK_STATE;
+    // 变更网络状态
+    private static final String PERMISSION_CHANGE_NETWORK_STATE = Manifest.permission.CHANGE_NETWORK_STATE;
+    // 网络访问权限
+    private static final String PERMISSION_INTERNET = Manifest.permission.INTERNET;
+    // 休眠唤醒权限
+    private static final String PERMISSION_WAKE_LOCK = Manifest.permission.WAKE_LOCK;
 
     private static final String TAG = PermissionUtils.class.getSimpleName();
     public static final int CODE_READ_CALENDAR = 0;
@@ -104,6 +116,12 @@ public class PermissionUtils {
     public static final int CODE_RECEIVE_MMS = 21;
     public static final int CODE_READ_EXTERNAL_STORAGE = 22;
     public static final int CODE_WRITE_EXTERNAL_STORAGE = 23;
+    public static final int CODE_ACCESS_WIFI_STATE = 24;
+    public static final int CODE_CHANGE_WIFI_STATE = 25;
+    public static final int CODE_ACCESS_NETWORK_STATE = 26;
+    public static final int CODE_CHANGE_NETWORK_STATE = 27;
+    public static final int CODE_INTERNET = 28;
+    public static final int CODE_WAKE_LOCK = 29;
     public static final int CODE_ALL_PERMISSION = 100;
 
     private static final String[] requestPermissions = {
@@ -111,7 +129,9 @@ public class PermissionUtils {
             PERMISSION_GET_ACCOUNTS, PERMISSION_ACCESS_FINE_LOCATION, PERMISSION_ACCESS_COARSE_LOCATION, PERMISSION_RECORD_AUDIO,
             PERMISSION_READ_PHONE_STATE, PERMISSION_CALL_PHONE, PERMISSION_READ_CALL_LOG, PERMISSION_WRITE_CALL_LOG, PERMISSION_ADD_VOICEMAIL,
             PERMISSION_USE_SIP, PERMISSION_PROCESS_OUTGOING_CALLS, PERMISSION_BODY_SENSORS, PERMISSION_SEND_SMS, PERMISSION_RECEIVE_SMS,
-            PERMISSION_READ_SMS, PERMISSION_RECEIVE_WAP_PUSH, PERMISSION_RECEIVE_MMS, PERMISSION_READ_EXTERNAL_STORAGE, PERMISSION_WRITE_EXTERNAL_STORAGE
+            PERMISSION_READ_SMS, PERMISSION_RECEIVE_WAP_PUSH, PERMISSION_RECEIVE_MMS, PERMISSION_READ_EXTERNAL_STORAGE, PERMISSION_WRITE_EXTERNAL_STORAGE,
+            PERMISSION_ACCESS_WIFI_STATE, PERMISSION_CHANGE_WIFI_STATE, PERMISSION_ACCESS_NETWORK_STATE, PERMISSION_CHANGE_NETWORK_STATE,
+            PERMISSION_INTERNET, PERMISSION_WAKE_LOCK
     };
 
     private static PermissionGrant utilGrant;
@@ -141,7 +161,7 @@ public class PermissionUtils {
                 List<String> requestPermission = new ArrayList<>();
                 for (int i = 0; i < permissionLength; i++) {
                     String permission = requestPermissions[permissions[i]];
-                    if (! hasPermission(fragment, permission)) {
+                    if (!hasPermission(fragment, permission)) {
                         requestPermission.add(permission);
                     }
                 }
@@ -167,7 +187,7 @@ public class PermissionUtils {
                 List<String> requestPermission = new ArrayList<>();
                 for (int i = 0; i < permissionLength; i++) {
                     String permission = requestPermissions[permissions[i]];
-                    if (! hasPermission(activity, permission)) {
+                    if (!hasPermission(activity, permission)) {
                         requestPermission.add(permission);
                     }
                 }

@@ -54,7 +54,7 @@ public class CustomTabLayout extends TabLayout {
                 tabAt.getCustomView().findViewById(R.id.tv_tab).setSelected(true);//第一个tab被选中
                 //设置选中标签的文字大小
                 textView.setTextSize(17);
-                textView.setTextColor(mContext.getResources().getColor(R.color.common_color_text));
+                textView.setTextColor(mContext.getResources().getColor(R.color.colorText));
             }
             textView.setText(adapter.getPageTitle(i));//设置tab上的文字
         }

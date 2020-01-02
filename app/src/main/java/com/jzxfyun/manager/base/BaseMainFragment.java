@@ -41,6 +41,10 @@ public abstract class BaseMainFragment extends MyBaseFragment {
         ((MainFragment) getParentFragment()).start(targetFragment);
     }
 
+    public void netWorkLoading(){
+        netWork().loading();
+    }
+
     /**
      * 主页面跳转到次级页面并返回值
      *

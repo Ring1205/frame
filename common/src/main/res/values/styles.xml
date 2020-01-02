@@ -20,19 +20,19 @@
     <!--TextInputLayout-->
     <style name="common_text_input_layout_style" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:textSize">13sp</item>
-        <item name="android:textColor">@color/common_color_hint</item>
+        <item name="android:textColor">@color/colorHint</item>
     </style>
 
     <!--TextInputLayout-->
     <style name="common_signin_text_input_layout_style" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:textSize">15sp</item>
-        <item name="android:textColor">@color/common_color_hint</item>
+        <item name="android:textColor">@color/colorHint</item>
     </style>
 
     <!--TextInputLayout-->
     <style name="common_hardcore_text_input_layout_style" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:textSize">15sp</item>
-        <item name="android:textColor">@color/common_color_text</item>
+        <item name="android:textColor">@color/colorText</item>
     </style>
 
     <style name="AnimationTopFade">
@@ -54,7 +54,7 @@
     <style name="style_search_delete_manage_tv">
         <item name="android:layout_height">match_parent</item>
         <item name="android:gravity">center_vertical</item>
-        <item name="android:textColor">@color/common_color_hint</item>
+        <item name="android:textColor">@color/colorHint</item>
         <item name="android:textSize">14dp</item>
         <item name="android:paddingRight">@dimen/common_padding</item>
         <item name="android:paddingLeft">@dimen/common_padding</item>

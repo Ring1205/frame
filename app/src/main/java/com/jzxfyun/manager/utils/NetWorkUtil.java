@@ -1,6 +1,8 @@
 package com.jzxfyun.manager.utils;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.IdRes;
@@ -8,15 +10,16 @@ import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.jzxfyun.manager.R;
-import com.jzxfyun.manager.event.ShowLoadType;
-import com.jzxfyun.manager.listener.NetRequestListener;
 import com.jzxfyun.common.base.BaseBean;
 import com.jzxfyun.common.utils.CommonUtils;
 import com.jzxfyun.common.utils.SPUtils;
 import com.jzxfyun.common.utils.TimeUpUtils;
 import com.jzxfyun.common.utils.netWork.ApiRequest;
 import com.jzxfyun.common.utils.netWork.NetUtils;
+import com.jzxfyun.manager.LoginActivity;
+import com.jzxfyun.manager.R;
+import com.jzxfyun.manager.event.ShowLoadType;
+import com.jzxfyun.manager.listener.NetRequestListener;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
@@ -42,7 +45,6 @@ public class NetWorkUtil<T extends BaseBean> {
     private List<String> actionUrl = new ArrayList<>();
     private NetRequestListener mCallBack;
     private ApiRequest[] mApiRequests;
-    private OnLayoutRefreshListener onLayoutRefreshListener;
 
     private Timer timer;
     private String lastAction;
@@ -66,11 +68,6 @@ public class NetWorkUtil<T extends BaseBean> {
 
     public <V extends View> V findViewById(int layout) {
         return layoutView.findViewById(layout);
-    }
-
-    public NetWorkUtil setOnLayoutRefreshListener(OnLayoutRefreshListener onLayoutRefreshListener) {
-        this.onLayoutRefreshListener = onLayoutRefreshListener;
-        return this;
     }
 
     /**
@@ -117,7 +114,7 @@ public class NetWorkUtil<T extends BaseBean> {
      * @param callBack
      * @param apiRequest
      */
-    public ApiRequest<T>[] setRequestListener(NetRequestListener callBack, ApiRequest<T>... apiRequest) {
+    public ApiRequest<T>[] setRequestListener(final NetRequestListener callBack, ApiRequest<T>... apiRequest) {
         for (ApiRequest<T> request : apiRequest)
             if (request != null && request.getRequestParams() != null) {
                 String projectId = (String) request.getRequestParams().get("projectId");
@@ -125,8 +122,8 @@ public class NetWorkUtil<T extends BaseBean> {
                 if (!TextUtils.isEmpty(projectId) && !projectId.equals(pId))
                     request.setRequestParams("projectId", pId);
             }
-
-        mCallBack = callBack;
+        if (mCallBack == null)
+            mCallBack = callBack;
         if (mApiRequests == null)
             mApiRequests = apiRequest;
 
@@ -144,20 +141,14 @@ public class NetWorkUtil<T extends BaseBean> {
                         loading.setEmptyText(baseBean.getMessage());
                     }
                 }
-                /**
-                 // 如果设置了刷新手势，关闭手势动画
-                 if (mRefreshLayout != null) {
-                 mRefreshLayout.finishRefresh(true);
-                 mRefreshLayout.finishLoadMore(true);
-                 }*/
                 // 如果该请求为分页请求，获取页面总数
                 if (mPagerNumbers.get(action) != null) {
                     mPagerNumbers.put(action, baseBean.getTotalPages());
-                    if (baseBean.getTotalRecords() == 0)
+                    if (baseBean.getTotalRecords() == 0 && loading != null)
                         loading.showEmpty();
                 }
                 // 返回成功请求结果
-                mCallBack.success(action, baseBean, tag);
+                callBack.success(action, baseBean, tag);
             }
 
             @Override
@@ -171,7 +162,7 @@ public class NetWorkUtil<T extends BaseBean> {
                                 loading.showLoading();
                             for (ApiRequest request : mApiRequests)
                                 if (request.getRequestType() != 0 && actionUrl.contains(request.getAction()))
-                                    setRequestListener(mCallBack, request);
+                                    setRequestListener(callBack, request);
                         }
                     };
                     if (e instanceof ConnectException) {
@@ -182,14 +173,23 @@ public class NetWorkUtil<T extends BaseBean> {
                         loading.setOnClickListener(listener);
                     }
                 }
-                /**
-                 // 如果设置了刷新手势，关闭手势动画
-                 if (mRefreshLayout != null) {
-                 mRefreshLayout.finishRefresh(false);
-                 mRefreshLayout.finishLoadMore(false);
-                 }*/
             }
-        }, false, apiRequest);
+        }, false, apiRequest).setOnLoginListener(new NetUtils.OnloginAgain() {
+            @Override
+            public void toLogin() {
+                NetUtils.getNewInstance(mContext).removeCookies();
+                CommonUtils.getSPUtils(mContext)
+                        .remove(SPUtils.USER_EMAIL
+                                , SPUtils.USER_ID
+                                , SPUtils.USER_NAME
+                                , SPUtils.USER_PHONE);
+
+                Intent intent = new Intent(mContext, LoginActivity.class);
+                intent.putExtra("main", "gg");
+                mContext.startActivity(intent);
+                ((Activity) mContext).finish();
+            }
+        });
         return apiRequest;
     }
 
@@ -228,8 +228,6 @@ public class NetWorkUtil<T extends BaseBean> {
                     mRefreshLayout.finishRefresh(1200, true);
                     loadPageIndex(true, callBack, apiRequests);
                 }
-                if (null != onLayoutRefreshListener)
-                    onLayoutRefreshListener.onRefresh(refreshLayout);
             }
         });
         mRefreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
@@ -239,8 +237,6 @@ public class NetWorkUtil<T extends BaseBean> {
                     mRefreshLayout.finishLoadMore(800);
                     loadPageIndex(false, callBack, apiRequests);
                 }
-                if (null != onLayoutRefreshListener)
-                    onLayoutRefreshListener.onLoadMore(refreshLayout);
             }
         });
         for (ApiRequest mApiRequest : apiRequests)
@@ -263,7 +259,7 @@ public class NetWorkUtil<T extends BaseBean> {
                 Integer pageIndex = (Integer) apiRequest.getRequestParams().get("pageIndex");
                 Integer pageSize = (Integer) apiRequest.getRequestParams().get("pageSize");
                 if (pageIndex != null && pageSize != null) {
-                    if (mPageSize == 10 && mPageSize != pageSize)
+                    if (request == -1 && mPageSize != pageSize)
                         mPageSize = pageSize;
                     if (request != -1 && pageSize > mPageSize) {
                         apiRequest.setRequestParams("pageIndex", pageIndex * pageSize / mPageSize);
@@ -285,7 +281,7 @@ public class NetWorkUtil<T extends BaseBean> {
     }
 
     /**
-     * 单独加载请求列表中的一个，可以改参数
+     * 单独加载请求列表中的一个，不可改参数
      *
      * @param action
      */
@@ -294,6 +290,31 @@ public class NetWorkUtil<T extends BaseBean> {
             for (ApiRequest mApiRequest : mApiRequests) {
                 if (action.equals(mApiRequest.getAction())) {
                     setRequestListener(mCallBack, mApiRequest);
+                    return mApiRequest;
+                }
+            }
+        return new ApiRequest<>(null, null);
+    }
+
+    /**
+     * 单独加载请求列表中的一个，可改参数
+     *
+     * @param apiReques
+     */
+    public void setRequestListener(@NonNull ApiRequest<T>... apiReques) {
+        setRequestListener(mCallBack, apiReques);
+    }
+
+    /**
+     * 获取ApiRequest对象,可以配合单独加载调用
+     *
+     * @param action
+     * @return
+     */
+    public ApiRequest getApiRequest(@NonNull String action) {
+        if (mApiRequests != null)
+            for (ApiRequest mApiRequest : mApiRequests) {
+                if (action.equals(mApiRequest.getAction())) {
                     return mApiRequest;
                 }
             }
@@ -375,26 +396,17 @@ public class NetWorkUtil<T extends BaseBean> {
     public void loading() {
         if (mApiRequests != null && mCallBack != null) {
             for (int i = 0; i < mApiRequests.length; i++)
-                if (mApiRequests[i].getRequestParams().get("pageIndex") != null && mApiRequests[i].getRequestParams().get("pageSize") != null)
+                if (mApiRequests[i].getRequestParams() != null && mApiRequests[i].getRequestParams().get("pageIndex") != null && mApiRequests[i].getRequestParams().get("pageSize") != null)
                     request = i;
 
             if (request != -1) {
                 Integer pageIndex = (Integer) mApiRequests[request].getRequestParams().get("pageIndex");
                 Integer pageSize = (Integer) mApiRequests[request].getRequestParams().get("pageSize");
-                mApiRequests[request].setRequestParams("pageIndex", 1);
                 mApiRequests[request].setRequestParams("pageSize", pageIndex * pageSize);
+                mApiRequests[request].setRequestParams("pageIndex", 1).setTag(1);
             }
             setRequestListener(mCallBack, mApiRequests);
         }
     }
 
-    public RefreshLayout getRefreshLayout() {
-        return mRefreshLayout;
-    }
-
-    public interface OnLayoutRefreshListener {
-        void onRefresh(RefreshLayout refreshLayout);
-
-        void onLoadMore(RefreshLayout refreshLayout);
-    }
 }

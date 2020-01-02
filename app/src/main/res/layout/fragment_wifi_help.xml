@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:ignore="SpUsage,ContentDescription">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/wifi_setting_ios"
+            android:textColor="@color/common_main_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding"
+            android:lineSpacingMultiplier="1.2"
+            android:text="@string/wifi_setting_ios_step"
+            android:textColor="@color/common_color_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/wifi_setting_android"
+            android:textColor="@color/common_main_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/common_padding"
+            android:layout_weight="1"
+            android:lineSpacingMultiplier="1.2"
+            android:text="@string/wifi_setting_android_step"
+            android:textColor="@color/common_color_text" />
+
+        <TextView
+            android:id="@+id/wifi_help_to_wifi_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding"
+            android:gravity="center"
+            android:padding="@dimen/common_padding"
+            android:text="@string/wifi_setting_fast_entry"
+            android:textColor="@color/common_main_color" />
+
+        <TextView
+            android:id="@+id/wifi_help_complete"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/wifi_bg_corner_main_4_hollow"
+            android:gravity="center"
+            android:text="@string/common_string_complete"
+            android:textColor="@color/common_color_text"
+            android:textSize="20dp" />
+    </LinearLayout>
+</LinearLayout>

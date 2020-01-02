@@ -370,6 +370,20 @@ public class CommonDialog extends DialogFragment {
         private Object tag;
 
         /**
+         * 中间按键的资源
+         */
+        private int centerRes;
+        /**
+         * 设置右侧按键文字
+         *
+         * @param centerRes {@link CommonDialog#rightRes}
+         * @return 构造器
+         */
+        public Builder setCenterRes(@StringRes int centerRes) {
+            this.centerRes = centerRes;
+            return this;
+        }
+        /**
          * 设置标签
          *
          * @param tag {@link CommonDialog#tag}

@@ -11,6 +11,7 @@
     <string name="common_string_progress">progress</string>
     <string name="common_string_silencing">Silencing</string>
     <string name="common_string_reset">Reset</string>
+    <string name="common_string_quit">quit</string>
     <string name="is_loading">Loading…</string>
     <string name="data_abnormal">Error…</string>
     <string name="all_loaded">All Loaded</string>
@@ -25,6 +26,7 @@
     <string name="rescan">Rescan</string>
     <string name="file_error">Failed to get. Please try again</string>
     <string name="picture_preview">Picture Preview</string>
+    <string name="start_up_string_sign_up_privacy_policy">Privacy Policy</string>
 
     <string name="test_push_msg">Smoke detector fire alarm prompt</string>
 
@@ -48,6 +50,8 @@
     <string name="common_string_format_error">Format error</string>
     <string name="common_string_url_error">Server address error</string>
     <string name="non_null">Enter null!</string>
+    <string name="no">NO</string>
+    <string name="yes">YES</string>
 
     <string name="long_press_camera">long press camera</string>
     <string name="time_is_too_short">time is too short</string>
@@ -81,4 +85,9 @@
     <string name="string_state_shielding">Shield</string>
     <string name="string_state_offline">Off-line</string>
     <string name="string_state_feedback">Feedback</string>
+
+    <!--获取通知栏显示权限-->
+    <string name="notification_set_title">Notification permission application</string>
+    <string name="notification_set_content">Need to get notification bar permissions to show you the first time in the event of an alarm</string>
+    <string name="permission_wifi">Denial of permission will not be able to access Wi-Fi accounts, resulting in device configuration</string>
 </resources>

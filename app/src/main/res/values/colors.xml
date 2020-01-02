@@ -2,5 +2,15 @@
 <resources>
     <color name="colorPrimary">#3c3c43</color>
     <color name="colorPrimaryDark">#ffffff</color>
-    <color name="colorAccent">#FD6224</color>
+    <color name="colorAccent">#ef7133</color>
+    
+    <color name="colorItemOrange">#e9dcd1</color>
+    <color name="colorItemGray">#E9E9E9</color>
+
+    <color name="common_main_color">#EF7133</color>
+    <color name="common_color_text">#3C3C43</color>
+    <color name="common_color_text_level_3">#999</color>
+    <color name="common_color_CCC">#CCC</color>
+    <color name="load_success">@color/common_main_color</color>
+    <color name="load_failure">@color/common_color_CCC</color>
 </resources>

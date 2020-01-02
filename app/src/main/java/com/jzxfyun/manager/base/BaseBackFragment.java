@@ -2,6 +2,7 @@ package com.jzxfyun.manager.base;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.DrawableRes;
 import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
@@ -54,6 +55,19 @@ public abstract class BaseBackFragment extends MyBaseFragment {
     public BaseBackFragment initToolbarNav() {
         if (mToolbar != null){
             mToolbar.setNavigationIcon(R.mipmap.ic_arrow_back_white_24dp);
+            mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (navigationListener == null || navigationListener.addNavigationBack())
+                        _mActivity.onBackPressed();
+                }
+            });
+        }
+        return this;
+    }
+    public BaseBackFragment initToolbarNav(@DrawableRes int resId) {
+        if (mToolbar != null){
+            mToolbar.setNavigationIcon(resId);
             mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

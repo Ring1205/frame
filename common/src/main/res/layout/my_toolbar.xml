@@ -41,7 +41,8 @@
                     android:layout_height="wrap_content"
                     android:paddingStart="@dimen/common_padding"
                     android:textColor="@android:color/white"
-                    android:textSize="20dp" />
+                    android:textSize="20dp"
+                    android:paddingLeft="@dimen/common_padding" />
             </RelativeLayout>
 
             <TextView

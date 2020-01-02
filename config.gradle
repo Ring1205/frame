@@ -3,13 +3,14 @@ project.ext {
     javaVersion = 8
     javaMaxHeapSize = '4G'
 
+
     // Android编译版本相关
     compileSdkVersion = 28
     buildToolsVersion = "28.0.3"
     minSdkVersion = 16
     targetSdkVersion = 27
-    versionCode = 1
-    versionName = "1.0.0"
+    versionCode = 60
+    versionName = "2.1.0"
 
     testRunner = "android.support.test.runner.AndroidJUnitRunner"
 

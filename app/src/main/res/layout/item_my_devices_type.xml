@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="90dp"
+        android:layout_marginTop="18dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_device"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/img_device" />
+
+        <TextView
+            android:id="@+id/tv_device_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="9dp"
+            android:text="感烟火灾探测器" />
+
+        <View
+            style="@style/Line.horizontal"
+            android:layout_margin="9dp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="18dp"
+        style="@style/Line.Vertical" />
+</LinearLayout>

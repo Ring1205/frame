@@ -98,7 +98,11 @@ public class CommonUtils {
     public static boolean hasActivity(Class activityClass) {
         return openActivityNameList.contains(activityClass.getSimpleName());
     }
+    public static final int DEVICE_TYPE_WIFI = 1;
 
+    public static int deviceTypeJudge(String adapterName) {
+        return adapterName.contains("01_WF_") ? DEVICE_TYPE_WIFI : 0;
+    }
     /**
      * 是否存在Activity
      *

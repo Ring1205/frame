@@ -31,6 +31,10 @@ public class SPUtils {
     public static final String FIRE_PUSH = "fire_push";
 
     public static final String NOTICE_PERMISSION_ASK = "notice_permission_ask";
+    /**
+     * 是否展示过隐私条款
+     */
+    public static final String IS_PRIVACY_POLICY_SHOWN = "is_privacy_policy_shown";
 
     /**
      * 登录设置

@@ -1,1 +1,1 @@
-include ':app', ':common', ':SRouter'
+include ':app', ':common', ':SRouter', ':zxing', ':map'

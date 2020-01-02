@@ -26,7 +26,7 @@ public abstract class CommonApp extends SApplication {
         SmartRefreshLayout.setDefaultRefreshHeaderCreator(new DefaultRefreshHeaderCreator() {
             @Override
             public RefreshHeader createRefreshHeader(Context context, RefreshLayout layout) {
-                layout.setPrimaryColorsId(R.color.common_color_bg, R.color.common_color_666);//全局设置主题颜色
+                layout.setPrimaryColorsId(R.color.colorBackground, R.color.color666);//全局设置主题颜色
                 ClassicsHeader mClassicsHeader = new ClassicsHeader(context).setTimeFormat(new DynamicTimeFormat("更新于 %s"));
 
                 return mClassicsHeader;//指定为经典Header，默认是 贝塞尔雷达Header

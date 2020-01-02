@@ -6,4 +6,187 @@
 
     <include layout="@layout/toolbar" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/bg_personal_information" />
+
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="22dp"
+            android:src="@mipmap/img_head" />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="26dp"
+            android:layout_toRightOf="@+id/iv_head"
+            android:text="昵称"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_device_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tv_user_name"
+            android:layout_toRightOf="@+id/iv_head"
+            android:text="@string/intelligent_detector_devices"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/tv_device_number"
+            android:layout_marginRight="16dp"
+            android:background="@mipmap/bg_white_circular_bead"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:gravity="center_vertical"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="@string/push_setting"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+                <com.jzxfyun.common.widget.SlideButton
+                    android:id="@+id/btn_slide_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="18dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:background="@color/colorLineCd" />
+
+            <RelativeLayout
+                android:id="@+id/rl_emergency_contact"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="20dp"
+                    android:drawableRight="@mipmap/ic_chevron_right"
+                    android:text="@string/emergency_contact"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@+id/ll_01"
+            android:background="@color/divider_line_color" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_basic_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:drawableLeft="@mipmap/ic_mine"
+        android:drawableRight="@mipmap/ic_chevron_right"
+        android:drawablePadding="10dp"
+        android:padding="18dp"
+        android:text="@string/basic_info"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@color/colorLineCd" />
+
+    <TextView
+        android:id="@+id/tv_privacy_policy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/ic_mine_policy"
+        android:drawableRight="@mipmap/ic_chevron_right"
+        android:drawablePadding="10dp"
+        android:padding="18dp"
+        android:text="@string/user_agreement_and_privacy_policy"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@color/colorLineCd" />
+
+    <TextView
+        android:id="@+id/tv_about_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/ic_mine_about"
+        android:drawableRight="@mipmap/ic_chevron_right"
+        android:drawablePadding="10dp"
+        android:padding="18dp"
+        android:text="@string/about_us"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@color/colorLineCd" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_close_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/btn_white_32"
+            android:gravity="center"
+            android:text="@string/btn_close_account"
+            android:textColor="@color/colorAccent" />
+    </RelativeLayout>
+
 </LinearLayout>

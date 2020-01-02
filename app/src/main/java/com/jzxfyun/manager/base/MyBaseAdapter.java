@@ -35,7 +35,7 @@ public class MyBaseAdapter<T> extends RecyclerView.Adapter<RecyclerViewHolder> {
     @NonNull
     @Override
     public RecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return new RecyclerViewHolder(LayoutInflater.from(context).inflate(resource, viewGroup, false));
+        return new RecyclerViewHolder(context,LayoutInflater.from(context).inflate(resource, viewGroup, false));
     }
 
     @Override

@@ -57,4 +57,10 @@ dependencies {
     api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-20'// 下拉刷新与上拉加载更多 说明书：https://github.com/scwang90/SmartRefreshLayout
     api 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-20'
     api 'org.greenrobot:eventbus:3.1.1'
+
+    api files('libs/jcore-android-1.2.7.jar')
+    api files('libs/jpush-android-3.2.0.jar')
+    //    api 'com.github.adrielcafe:AndroidAudioConverter:0.0.8'
+    implementation files('libs/jcore-android-1.2.7.jar')
+    implementation files('libs/jpush-android-3.2.0.jar')
 }

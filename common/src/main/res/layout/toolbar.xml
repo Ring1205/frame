@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/AppBarLayout"
-    android:paddingTop="@dimen/fab_margin"
     android:background="@android:color/white"
     app:elevation="0dp">
 

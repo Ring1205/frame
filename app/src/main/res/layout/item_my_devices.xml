@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_item"
+        style="@style/CardView.BackgroundColor.DeviceItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/iv_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:tint="@color/colorItemOrange"
+            android:src="@drawable/side_nav_bar"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="6dp"
+            android:layout_height="90dp">
+
+            <TextView
+                android:id="@+id/tv_device_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:maxLength="6"
+                android:singleLine="true"
+                android:text="感烟火灾探测器" />
+
+            <TextView
+                android:id="@+id/tv_device_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/tv_device_type"
+                android:layout_gravity="center"
+                android:textColor="@color/colorTextGray9"
+                android:text="卧室" />
+
+            <ImageView
+                android:id="@+id/iv_device"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:src="@mipmap/img_device" />
+
+            <TextView
+                android:id="@+id/tv_device_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:drawableLeft="@drawable/shape_device_state"
+                android:drawablePadding="5dp"
+                android:layout_gravity="center"
+                android:text="@string/on_line" />
+
+            <CheckBox
+                android:id="@+id/checkbox_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"
+                android:padding="5dp"
+                android:clickable="false"
+                android:checked="false"
+                android:button="@drawable/check_delete"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

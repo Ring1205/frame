@@ -15,28 +15,28 @@
         android:layout_marginTop="165dp"
         android:src="@mipmap/ic_hzy_name"/>
 
-    <Button
-        android:id="@+id/btn_wechat_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="微 信 授 权"
-        android:textSize="20dp"
-        android:paddingLeft="42dp"
-        android:paddingRight="42dp"
-        android:layout_marginBottom="250dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/button_login_background"/>
-    <Button
-        android:id="@+id/btn_account_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="账 号 登 录"
-        android:textSize="20dp"
-        android:paddingLeft="42dp"
-        android:paddingRight="42dp"
-        android:layout_marginBottom="250dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/button_login_background"/>
+    <FrameLayout
+        android:id="@+id/item2"
+        android:layout_width="327dp"
+        android:layout_height="420dp"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"
+        android:background="@mipmap/start_up_bg_login_detail"/>
+
+    <!--Circular Reveal会隐藏背景，暂时用来占位-->
+    <FrameLayout
+        android:id="@+id/item_divider"
+        android:layout_width="327dp"
+        android:layout_height="420dp"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"
+        android:background="@mipmap/start_up_bg_login_detail" />
+
+    <FrameLayout
+        android:id="@+id/item1"
+        android:layout_width="327dp"
+        android:layout_height="420dp"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"
+        android:background="@mipmap/start_up_bg_login_detail" />
 </RelativeLayout>

@@ -12,8 +12,8 @@
         android:paddingRight="@dimen/push_margin_width"
         android:hint="@string/common_string_search"
         android:inputType="text"
-        android:textColor="@color/common_color_text_level_3"
-        android:textColorHint="@color/common_color_hint"
+        android:textColor="@color/colorTextGray9"
+        android:textColorHint="@color/colorHint"
         android:textSize="14dp"
         tools:ignore="SpUsage"
         android:paddingLeft="25dp" />

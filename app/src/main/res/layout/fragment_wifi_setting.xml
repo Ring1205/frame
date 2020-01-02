@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="SpUsage,ContentDescription">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="30dp"
+        android:paddingTop="@dimen/common_padding"
+        android:paddingEnd="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding"
+            android:text="@string/wifi_environment_configuration"
+            android:textColor="@color/common_color_text"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.5"
+            android:padding="@dimen/common_padding"
+            android:text="@string/wifi_setting_environment_desc"
+            android:textColor="@color/common_color_text_level_3"
+            android:textSize="15dp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            app:hintTextAppearance="@style/common_text_input_layout_style">
+
+            <com.jzxfyun.common.widget.BswTextInputEditText
+                android:id="@+id/wifi_setting_name_et"
+                style="@style/text_input_style_item_et"
+                android:focusable="false"
+                android:hint="@string/wifi_name"
+                android:inputType="text" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/common_text_input_layout_style">
+
+            <com.jzxfyun.common.widget.BswTextInputEditText
+                android:id="@+id/wifi_setting_password_et"
+                style="@style/text_input_style_item_et"
+                android:hint="@string/wifi_password"
+                android:inputType="text" />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/wifi_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/common_padding"
+                android:paddingBottom="@dimen/common_padding"
+                android:text="@string/wifi_switch"
+                android:textColor="@color/common_main_color"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </LinearLayout>
+        <Button
+            android:id="@+id/wifi_setting_next"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/common_bg_corner_main_22"
+            android:gravity="center"
+            android:text="@string/wifi_configuration_completed"
+            android:textColor="@android:color/white"
+            android:textSize="17dp" />
+</LinearLayout>

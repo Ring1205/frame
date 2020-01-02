@@ -46,7 +46,7 @@ public class ScreenUtil {
      *
      * @return
      */
-    public float getDensity(Context mContext) {
+    public static float getDensity(Context mContext) {
         return getDisplayMetrics(mContext, false).density;
     }
 
@@ -65,7 +65,7 @@ public class ScreenUtil {
      * @param dpValue dp值
      * @return 转换后的px值
      */
-    public int dp2px(Context mContext, int dpValue) {
+    public static int dp2px(Context mContext, int dpValue) {
         return (int) (dpValue * getDensity(mContext) + 0.5f);
     }
 
@@ -159,7 +159,7 @@ public class ScreenUtil {
         return bitmap;
     }
 
-    public DisplayMetrics getDisplayMetrics(Context context, boolean isActivity) {
+    public static DisplayMetrics getDisplayMetrics(Context context, boolean isActivity) {
         if (CommonUtils.isEmpty(context)) {
             throw new IllegalArgumentException("context is null");
         }

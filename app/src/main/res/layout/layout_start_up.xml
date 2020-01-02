@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingRight="40dp"
+    android:paddingLeft="40dp"
+    android:paddingTop="15dp"
+    tools:ignore="SpUsage">
+
+    <TextView
+        android:id="@+id/start_up_notice_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|bottom"
+        android:layout_alignParentBottom="true"
+        android:padding="25dp"
+        android:text="@string/btn_sign_up"
+        android:textSize="20dp" />
+</RelativeLayout>

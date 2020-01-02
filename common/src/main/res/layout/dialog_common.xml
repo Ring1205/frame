@@ -40,7 +40,7 @@
         android:layout_marginTop="22dp"
         android:gravity="center_horizontal"
         android:text="注销账号？"
-        android:textColor="@color/common_main_color"
+        android:textColor="@color/colorMain"
         android:textSize="13dp" />
 
     <LinearLayout
@@ -98,7 +98,7 @@
             android:gravity="center"
             android:padding="@dimen/common_padding"
             android:text="确定"
-            android:textColor="@color/common_main_color"
+            android:textColor="@color/colorMain"
             android:textSize="17dp" />
     </LinearLayout>
 </LinearLayout>

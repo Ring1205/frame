@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="SpUsage,ContentDescription">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/enter_registration_device_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="10dp"
+            android:src="@mipmap/wifi_logo_registation" />
+
+        <TextView
+            android:id="@+id/enter_registration_step"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.3"
+            android:padding="30dp"
+            android:text="@string/enter_registration_mode"
+            android:textSize="17dp" />
+
+        <LinearLayout
+            android:id="@+id/running_record_can_search_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/running_record_search_type"
+                style="@style/CustomCheckboxTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_padding"
+                android:layout_marginRight="@dimen/common_padding"
+                android:clickable="false"
+                android:focusable="false"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:gravity="center_vertical"
+                android:text="@string/success_operation"
+                android:textColor="@color/common_color_CCC"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/enter_registration_next"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="@dimen/common_padding"
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/common_bg_corner_main_22"
+            android:gravity="center"
+            android:text="@string/common_string_next"
+            android:textColor="@android:color/white"
+            android:textSize="17dp" />
+    </LinearLayout>
+</LinearLayout>

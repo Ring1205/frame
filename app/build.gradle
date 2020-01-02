@@ -55,7 +55,9 @@ android {
     // 多渠道打包
     productFlavors {
         _hzyzs_ {
-            buildConfigField "String", "CHANNEL", "\"company\""    //	公司官方包
+            buildConfigField "String", "CHANNEL", "\"company\""
+            testFunctionalTest = true
+            testHandleProfiling = true//	公司官方包
         }
     }
 
@@ -76,8 +78,13 @@ dependencies {
     api project.ext.dependencies.gson
 
     api project(':common')
+    api project(':map')
+    api project(':zxing')
+    implementation group: 'com.alibaba', name: 'fastjson', version: '1.1.68.android'
 
     api 'com.github.czy1121:loadinglayout:1.0.1'// 说明书：https://github.com/czy1121/loadinglayout
+
+    api 'com.contrarywind:Android-PickerView:4.1.9'// 说明书：https://github.com/Bigkoo/Android-PickerView
 }
 repositories {
     maven { url "https://jitpack.io" }

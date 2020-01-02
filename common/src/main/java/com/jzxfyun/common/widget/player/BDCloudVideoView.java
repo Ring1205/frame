@@ -319,7 +319,7 @@ public class BDCloudVideoView extends FrameLayout implements MediaController.Med
         rllp.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
         rllp.addRule(RelativeLayout.BELOW, android.R.id.text1);
         cachingProgressHint = new TextView(this.getContext());
-        cachingProgressHint.setTextColor(mAppContext.getResources().getColor(R.color.common_color_text));
+        cachingProgressHint.setTextColor(mAppContext.getResources().getColor(R.color.colorText));
         cachingProgressHint.setText(R.string.video_loading);
         cachingProgressHint.setGravity(Gravity.CENTER_HORIZONTAL);
         cachingHintViewRl.addView(cachingProgressHint, rllp);

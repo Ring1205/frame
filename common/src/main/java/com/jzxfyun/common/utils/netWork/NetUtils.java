@@ -3,11 +3,13 @@ package com.jzxfyun.common.utils.netWork;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.text.TextUtils;
 
 import com.google.gson.Gson;
+import com.jzxfyun.common.utils.SPUtils;
 import com.sarlmoclen.router.SRouter;
 import com.sarlmoclen.router.SRouterRequest;
 import com.sarlmoclen.router.forMonitor.LogoutActionName;
@@ -110,7 +112,7 @@ public class NetUtils {
         if (headerParams == null) {
             headerParams = new HashMap<>();
             headerParams.put("Content-Type", "application/json");
-            // 火知眼助手的APP编码是2
+            // 火知眼助手的APP编码是2,个人版是4
             headerParams.put("appCode", 4);
             headerParams.put("language", Locale.getDefault().getLanguage());
         }
@@ -217,7 +219,7 @@ public class NetUtils {
      * @param showDialog         是否显示弹窗
      * @param apiRequests        请求类
      */
-    public void request(NetRequestCallBack netRequestCallBack, final boolean showDialog, final ApiRequest... apiRequests) {
+    public NetUtils request(NetRequestCallBack netRequestCallBack, final boolean showDialog, final ApiRequest... apiRequests) {
         if (CommonUtils.judgeListNull(apiRequests) == 0) {
             throw new IllegalArgumentException("apiRequests can't be null");
         }
@@ -225,6 +227,7 @@ public class NetUtils {
             showLoadDialog();
         }
         tokenJudge(netRequestCallBack, showDialog, apiRequests);
+        return this;
     }
 
     /**
@@ -541,11 +544,7 @@ public class NetUtils {
                     if (!action.equals(NetBean.actionSignInByTokenId)) {
                         CommonUtils.toast(mContext, R.string.error_toast_401);
                     }
-                    if (!CommonUtils.hasActivity("MainActivity")) {
-                        return;
-                    }
-                    CommonUtils.closeActivity();
-                    SRouter.getInstance().sendMessage(mContext, SRouterRequest.creat().action(LogoutActionName.name));
+                    OnloginAgain.toLogin();
                 } else {
                     if (action.equals(NetBean.actionSetPushInfo)) {
                         return;
@@ -644,5 +643,16 @@ public class NetUtils {
          * @param tag    当接口复用时，用于区分请求的表识
          */
         public abstract void error(String action, Throwable e, Object tag);
+    }
+
+
+    private OnloginAgain OnloginAgain;
+
+    public interface OnloginAgain {
+        void toLogin();
+    }
+
+    public void setOnLoginListener(OnloginAgain OnloginAgain) {
+        this.OnloginAgain = OnloginAgain;
     }
 }
